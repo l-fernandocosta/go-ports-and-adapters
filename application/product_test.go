@@ -11,8 +11,8 @@ import (
 
 func TestProductEnableAndDisableWithSuccess(t *testing.T) {
 	// Test case 1: Enable product
-	product := application.NewProduct("1", "Product A", 100.0)
-
+	product := application.NewProduct()
+	product.Price = 10
 	product.Enable()
 	assert.Equal(t, product.GetStatus(), application.ENABLED)
 
